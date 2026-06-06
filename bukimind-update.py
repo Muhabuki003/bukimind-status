@@ -64,7 +64,7 @@ def main():
     args = parser.parse_args()
 
     data = load()
-    now = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     data["updated"] = now
     changes = []
 
