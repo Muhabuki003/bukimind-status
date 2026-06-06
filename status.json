@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T22:57:28Z",
+  "updated": "2026-06-06T23:01:38Z",
   "current_room": "hq",
   "rooms": {
     "hq": {
@@ -8,11 +8,12 @@
       "metrics": {
         "tasks": 83,
         "prs": 3,
-        "rooms": 3,
+        "rooms": 4,
         "bars": {
           "loveflix": 72,
           "bookistudio": 45,
-          "chronos": 0
+          "chronos": 0,
+          "dropship": 0
         }
       }
     },
@@ -173,9 +174,60 @@
           "docs": 40
         }
       }
+    },
+    "dropship": {
+      "name": "Dropship Pipeline",
+      "agents": [
+        {
+          "id": "orchestrator",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "No activity yet"
+        },
+        {
+          "id": "agent-2",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "No activity yet"
+        },
+        {
+          "id": "agent-3",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "No activity yet"
+        },
+        {
+          "id": "agent-4",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "No activity yet"
+        },
+        {
+          "id": "agent-5",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "No activity yet"
+        },
+        {
+          "id": "agent-6",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "No activity yet"
+        }
+      ],
+      "metrics": {
+        "tasks": 0,
+        "prs": 0,
+        "agents": 6,
+        "bars": {}
+      }
     }
   },
   "events": [
+    {
+      "agent": "BUKIMIND",
+      "msg": "\ud83c\udfd7\ufe0f New project: Dropship Pipeline"
+    },
     {
       "agent": "BUKIMIND",
       "msg": "\ud83c\udf89 Multi-room office live: HQ + 3 rooms \u2014 click to explore!"
@@ -195,10 +247,6 @@
     {
       "agent": "SYSTEM",
       "msg": "Start Project trigger armed \u2014 waiting for your command"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "BOOKISTUDIO Stripe products created"
     }
   ]
 }
