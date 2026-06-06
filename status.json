@@ -180,46 +180,51 @@
       "agents": [
         {
           "id": "orchestrator",
-          "status": "idle",
-          "task": "Standing by",
-          "output": "No activity yet"
+          "status": "working",
+          "task": "Managing full dropship pipeline",
+          "output": "DROPSHIP CORE\nPipeline: INITIALIZED\nReading DROPSHIPPING.md\n8 sub-agents mapped to 6 desks\nWaiting for TikTok API access"
         },
         {
-          "id": "agent-2",
+          "id": "discovery",
           "status": "idle",
-          "task": "Standing by",
-          "output": "No activity yet"
+          "task": "Awaiting TikTok API credentials",
+          "output": "TikTok trend scanner: INACTIVE\nNeeds: TikTok API key or scraper setup\nWill scan for viral products with >500K views"
         },
         {
-          "id": "agent-3",
+          "id": "sourcing",
           "status": "idle",
-          "task": "Standing by",
-          "output": "No activity yet"
+          "task": "Awaiting discovery input",
+          "output": "TeamDrop/Alibaba sourcer: STANDBY\nWill find product pricing, variants, shipping times"
         },
         {
-          "id": "agent-4",
+          "id": "builder",
           "status": "idle",
-          "task": "Standing by",
-          "output": "No activity yet"
+          "task": "Awaiting sourced product",
+          "output": "Store builder: IDLE\nShopify + Brand + Domain combined\nWill generate brand identity + headless frontend"
         },
         {
-          "id": "agent-5",
+          "id": "social",
           "status": "idle",
-          "task": "Standing by",
-          "output": "No activity yet"
+          "task": "Awaiting store to promote",
+          "output": "Social poster: STANDBY\nTikTok + Instagram accounts ready\nContent downloader + scheduler idle"
         },
         {
-          "id": "agent-6",
+          "id": "analytics",
           "status": "idle",
-          "task": "Standing by",
-          "output": "No activity yet"
+          "task": "Awaiting content data",
+          "output": "Analytics tracker: STANDBY\nWill monitor post engagement\nWill recommend paid ads on threshold breach"
         }
       ],
       "metrics": {
-        "tasks": 0,
+        "tasks": 9,
         "prs": 0,
         "agents": 6,
-        "bars": {}
+        "bars": {
+          "discovery": 0,
+          "sourcing": 0,
+          "store": 0,
+          "content": 0
+        }
       }
     }
   },
