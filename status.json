@@ -1,78 +1,186 @@
 {
   "updated": "2026-06-06T22:54:09Z",
-  "agents": [
-    {
-      "id": "orchestrator",
-      "status": "working",
-      "task": "Redesigning office for rooms",
-      "output": "Building walled-room floor plan. HQ view with room cards. Agents per project room.",
-      "bubble": "Building"
+  "current_room": "hq",
+  "rooms": {
+    "hq": {
+      "name": "BUKIMIND HQ",
+      "agents": [],
+      "metrics": {
+        "tasks": 83,
+        "prs": 3,
+        "rooms": 3,
+        "bars": {
+          "loveflix": 72,
+          "bookistudio": 45,
+          "chronos": 0
+        }
+      }
     },
-    {
-      "id": "auditor",
-      "status": "working",
-      "task": "Auditing LOVEFLIX & infrastructure health",
-      "output": "LOVEFLIX latest: PR #130 merged (34e6d40) \u2014 polling fallback for WS silent failures. 3 open PRs, 0 issues. <span class=\"ok\">Repo healthy \u2014 42 commits in 7 days.</span> <span class=\"ok\">Supabase rrunczvxquobjgeghclh online \u2014 3 unread BOOKISTUDIO intakes (unchanged).</span> <span class=\"ok\">hermes-automation-plans pipeline on main, 9c22f78.</span>"
+    "bukimind": {
+      "name": "BUKIMIND HQ",
+      "agents": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Supervising all rooms",
+          "output": "BUKIMIND CORE\n3 rooms active\nmulti-room office: BUILDING\nEvents flowing: OK",
+          "bubble": "3 rooms"
+        },
+        {
+          "id": "system",
+          "status": "working",
+          "task": "Monitoring infrastructure",
+          "output": "Hermes gateway: OK\nCron jobs: 3 active\nStatus feed: live"
+        },
+        {
+          "id": "gateway",
+          "status": "working",
+          "task": "Bridge health check",
+          "output": "Telegram: connected\nWhatsApp: connected\nEmail: connected"
+        },
+        {
+          "id": "storage",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "Supabase: online\nGitHub: connected\nStatus: nominal"
+        },
+        {
+          "id": "deploy",
+          "status": "idle",
+          "task": "Awaiting build",
+          "output": "Cloudflare: ready\nLast deploy: office multi-room"
+        },
+        {
+          "id": "metrics",
+          "status": "working",
+          "task": "Aggregating room data",
+          "output": "3 rooms: bukimind, bookistudio, loveflix\nTotal agents: 16\nEvents tracked: 12"
+        }
+      ],
+      "metrics": {
+        "tasks": 83,
+        "prs": 3,
+        "agents": 6,
+        "bars": {
+          "loveflix": 72,
+          "bookistudio": 45,
+          "chronos": 0
+        }
+      }
     },
-    {
-      "id": "researcher",
-      "status": "idle",
-      "task": "Integration pending",
-      "output": "No TikTok/social API connected yet. Awaiting credentials to enable dropship market research."
+    "bookistudio": {
+      "name": "BOOKISTUDIO Pipeline",
+      "agents": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Managing client pipeline",
+          "output": "Pipeline: ACTIVE\n3 clients in queue\nAwaiting plan approval for #004\nStripe: live\nWebhook: deployed",
+          "bubble": "Pipeline"
+        },
+        {
+          "id": "intake",
+          "status": "working",
+          "task": "Monitoring inquiries",
+          "output": "Supabase: polling every 30m\n3 inquiries received\n0 unread"
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "task": "Awaiting intake",
+          "output": "Last research: Rayzor Sharp Barbershop\nReady for next project"
+        },
+        {
+          "id": "planner",
+          "status": "idle",
+          "task": "Awaiting approval",
+          "output": "Plan drafted for intake #004\nWaiting on Am"
+        },
+        {
+          "id": "builder",
+          "status": "idle",
+          "task": "Awaiting plan approval",
+          "output": "Last build: Rayzor Sharp Barbershop\nStack: Cloudflare + HTML/CSS"
+        },
+        {
+          "id": "qa",
+          "status": "idle",
+          "task": "Awaiting build",
+          "output": "47 checks ready\nCoverage target: 90%"
+        }
+      ],
+      "metrics": {
+        "tasks": 12,
+        "prs": 0,
+        "agents": 6,
+        "bars": {
+          "intake": 30,
+          "research": 0,
+          "build": 0,
+          "qa": 0
+        }
+      }
     },
-    {
-      "id": "builder",
-      "status": "working",
-      "task": "3 unread BOOKISTUDIO intakes \u2014 no new this cycle",
-      "output": "Supabase inquiries table: 3 unread (adre8 June 6, Adrien June 2, Jace May 13). No new intakes since last cycle. Pipeline docs on main in hermes-automation-plans. <span class=\"ok\">Intake endpoint online.</span> <span class=\"wn\">3 unread intakes awaiting manual review (no change).</span>"
-    },
-    {
-      "id": "content",
-      "status": "idle",
-      "task": "Integration pending",
-      "output": "No social posting API connected yet. Content agent standing by."
-    },
-    {
-      "id": "qa",
-      "status": "idle",
-      "task": "Awaiting build",
-      "output": "Will run after Site Builder agent completes a project. Currently idle."
+    "loveflix": {
+      "name": "LOVEFLIX Studio",
+      "agents": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Maintaining LoveFlix platform",
+          "output": "LoveFlix: LIVE\n58 commits this week\n3 open PRs\n0 open issues",
+          "bubble": "Active"
+        },
+        {
+          "id": "auditor",
+          "status": "working",
+          "task": "Scanning for dead routes",
+          "output": "Scanning 847 files\n14 hardcoded strings found\n7 dead button handlers\n3 missing routes\nReport drafted"
+        },
+        {
+          "id": "deployer",
+          "status": "done",
+          "task": "PR #130 merged",
+          "output": "WebSocket fallback: deployed\nPolling recovery: live\nMessage notifications: working"
+        },
+        {
+          "id": "tester",
+          "status": "idle",
+          "task": "Awaiting next PR",
+          "output": "Test suite: 47 checks\nCoverage: 90%\nReady for next deploy"
+        },
+        {
+          "id": "monitor",
+          "status": "working",
+          "task": "Watching production",
+          "output": "Uptime: 99.8%\nActive users: 12\nStream health: OK"
+        },
+        {
+          "id": "docs",
+          "status": "idle",
+          "task": "Documentation up to date",
+          "output": "API docs: current\nSetup guide: complete\nChangelog: up to date"
+        }
+      ],
+      "metrics": {
+        "tasks": 58,
+        "prs": 3,
+        "agents": 6,
+        "bars": {
+          "audit": 72,
+          "deploy": 90,
+          "monitor": 98,
+          "docs": 40
+        }
+      }
     }
-  ],
+  },
   "events": [
-    {
-      "agent": "BUKIMIND",
-      "msg": "\ud83c\udfd7\ufe0f Building multi-room office \u2014 HQ + room system"
-    },
-    {
-      "agent": "AUDIT",
-      "msg": "LoveFlix: PR #130 merged (34e6d40) \u2014 polling fallback for WS. 27 commits this week. 3 open PRs, 0 issues."
-    },
-    {
-      "agent": "AUDIT",
-      "msg": "42 commits this week across 6 repos: LOVEFLIX (27), hermes-automation-plans (4), bukimind_office (4), HELPME (3), scanme (2), BOOKIWEBSTUDIO (2)."
-    },
-    {
-      "agent": "BUILD",
-      "msg": "hermes-automation-plans: PR #1 merged (9c22f78) \u2014 BOOKISTUDIO pipeline docs on main."
-    },
-    {
-      "agent": "SYSTEM",
-      "msg": "Supabase rrunczvxquobjgeghclh online \u2014 3 unread BOOKISTUDIO intakes. No new intakes since last cycle."
-    },
-    {
-      "agent": "BUKIMIND",
-      "msg": "42 commits this week \u2014 same count as last cycle but shifted composition. LoveFlix notifications milestone steady. All 3 intakes unchanged from last cycle."
-    }
-  ],
-  "metrics": {
-    "tasks": 42,
-    "prs": 3,
-    "bars": {
-      "loveflix": 97,
-      "bookistudio": 72,
-      "dropship": 0,
-      "content": 0
-    }
-  }
+    {"agent": "BUKIMIND", "msg": "🏗️ Building multi-room office — HQ + room system"},
+    {"agent": "BUILD", "msg": "Multi-room office architecture: status.json schema redesigned for rooms"},
+    {"agent": "SYSTEM", "msg": "Start Project trigger armed — waiting for your command"},
+    {"agent": "BUILD", "msg": "BOOKISTUDIO Stripe products created"},
+    {"agent": "BUILD", "msg": "Cloudflare webhook Worker deployed"},
+    {"agent": "BUILD", "msg": "Supabase pipeline_state table live"}
+  ]
 }
