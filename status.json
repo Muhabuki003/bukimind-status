@@ -1,30 +1,30 @@
 {
-  "updated": "2026-06-06T20:09:00Z",
+  "updated": "2026-06-06T22:00:00Z",
   "agents": [
     {
       "id": "orchestrator",
       "status": "working",
-      "task": "Active automation: 42 commits this week across 9 repos",
-      "output": "LOVEFLIX: 42 commits/wk, PR #130 merged (live message notifications). BOOKISTUDIO: pipeline PR #1 merged. 3 client inquiries pending in Supabase. hermes-automation-plans: PR #1 merged (bookistudio pipeline). Automation pipeline cycling.",
-      "bubble": "42 commits this week"
+      "task": "Active automation: 40 commits this week across 6 repos",
+      "output": "LOVEFLIX: 25 commits this week. PR #130 merged (polling fallback for WS failures). BOOKISTUDIO: pipeline PR #1 merged, Supabase intake endpoint unreachable (NXDOMAIN). hermes-automation-plans: PR #1 merged (bookistudio pipeline). bukimind_office: 4 commits (fresh deployment). Automation cycling.",
+      "bubble": "40 commits across 6 repos"
     },
     {
       "id": "auditor",
       "status": "working",
       "task": "Auditing LOVEFLIX & infrastructure health",
-      "output": "LOVEFLIX latest: Merge PR #130 feat/live-message-notifications fix. 3 open PRs (#125, #96, #18). 0 open issues. <span class=\"ok\">Repo healthy</span>"
-    },
-    {
-      "id": "builder",
-      "status": "working",
-      "task": "BOOKISTUDIO pipeline active",
-      "output": "3 unread client inquiries in Supabase (ids: 9, 11, 14). Pipeline PR merged to main. Waiting for intake processing trigger. Stripe products live (Deposit + Remaining)."
+      "output": "LOVEFLIX latest: Merge PR #130 feat/live-message-notifications — polling fallback fix. 3 open PRs. 0 open issues. <span class=\"ok\">Repo healthy. 0 pending issues.</span> Supabase project DNS unresolved (objrjyzcmbmtzschdiyd.supabase.co NXDOMAIN)."
     },
     {
       "id": "researcher",
       "status": "idle",
       "task": "Integration pending",
       "output": "No TikTok/social API connected yet. Awaiting credentials to enable dropship market research."
+    },
+    {
+      "id": "builder",
+      "status": "working",
+      "task": "BOOKISTUDIO pipeline active, intake monitoring down",
+      "output": "Pipeline PR #1 merged to main. <span class=\"wn\">Supabase host unreachable (NXDOMAIN) — cannot count unread intakes.</span> hermes-automation-plans active with pipeline docs. Stripe products configured."
     },
     {
       "id": "content",
@@ -42,35 +42,35 @@
   "events": [
     {
       "agent": "BUKIMIND",
-      "msg": "Office status pulse: 42 commits this week, 3 open PRs, 3 inquiries waiting"
+      "msg": "Office status: 40 commits this week, 3 open PRs, Supabase endpoint NXDOMAIN"
+    },
+    {
+      "agent": "AUDIT",
+      "msg": "LoveFlix: 0 open issues, 3 open PRs, PR #130 (notifications polling fix) deployed"
+    },
+    {
+      "agent": "BUILD",
+      "msg": "BOOKISTUDIO: pipeline PR merged, Supabase intake unreachable — DNS failure"
+    },
+    {
+      "agent": "BUILD",
+      "msg": "hermes-automation-plans PR #1 merged — bookistudio pipeline docs landed"
+    },
+    {
+      "agent": "AUDIT",
+      "msg": "LoveFlix PR #130 merged — live message notifications with polling fallback"
     },
     {
       "agent": "SYSTEM",
       "msg": "Start Project trigger armed — waiting for your command"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "BOOKISTUDIO pipeline PR merged to main branch"
-    },
-    {
-      "agent": "AUDIT",
-      "msg": "LoveFlix PR #130 merged — live message notifications deployed"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "3 unread client inquiries in Supabase — awaiting intake trigger"
-    },
-    {
-      "agent": "BUKIMIND",
-      "msg": "Office status feed initialized — 6 agents online"
     }
   ],
   "metrics": {
-    "tasks": 42,
+    "tasks": 40,
     "prs": 3,
     "bars": {
-      "loveflix": 80,
-      "bookistudio": 55,
+      "loveflix": 85,
+      "bookistudio": 60,
       "dropship": 0,
       "content": 0
     }
