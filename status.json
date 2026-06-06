@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T23:28:00Z",
+  "updated": "2026-06-06T23:48:49Z",
   "version": 5,
   "current_room": "loveflix",
   "rooms": {
@@ -21,57 +21,228 @@
     "bukimind": {
       "name": "BUKIMIND HQ",
       "agents": [
-        {"id": "orchestrator", "status": "working", "task": "Supervising all rooms", "output": "BUKIMIND CORE\n4 rooms active\nmulti-room office: LIVE\nEvents flowing: OK"},
-        {"id": "system", "status": "working", "task": "Monitoring infrastructure", "output": "Hermes gateway: OK\nStatus feed: live"},
-        {"id": "gateway", "status": "working", "task": "Bridge health check", "output": "Telegram: connected\nWhatsApp: connected\nEmail: connected"},
-        {"id": "storage", "status": "idle", "task": "Standing by", "output": "Supabase: online\nGitHub: connected"},
-        {"id": "deploy", "status": "idle", "task": "Awaiting build", "output": "Cloudflare: ready\nWorkers: active"},
-        {"id": "metrics", "status": "working", "task": "Aggregating room data", "output": "4 rooms active\nTotal agents: 24"}
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Supervising all rooms",
+          "output": "BUKIMIND CORE\n4 rooms active\nmulti-room office: LIVE\nEvents flowing: OK"
+        },
+        {
+          "id": "system",
+          "status": "working",
+          "task": "Monitoring infrastructure",
+          "output": "Hermes gateway: OK\nStatus feed: live"
+        },
+        {
+          "id": "gateway",
+          "status": "working",
+          "task": "Bridge health check",
+          "output": "Telegram: connected\nWhatsApp: connected\nEmail: connected"
+        },
+        {
+          "id": "storage",
+          "status": "idle",
+          "task": "Standing by",
+          "output": "Supabase: online\nGitHub: connected"
+        },
+        {
+          "id": "deploy",
+          "status": "idle",
+          "task": "Awaiting build",
+          "output": "Cloudflare: ready\nWorkers: active"
+        },
+        {
+          "id": "metrics",
+          "status": "working",
+          "task": "Aggregating room data",
+          "output": "4 rooms active\nTotal agents: 24"
+        }
       ],
-      "metrics": {"tasks": 83, "prs": 3, "agents": 6, "bars": {}}
+      "metrics": {
+        "tasks": 83,
+        "prs": 3,
+        "agents": 6,
+        "bars": {}
+      }
     },
     "bookistudio": {
       "name": "BOOKISTUDIO Pipeline",
       "agents": [
-        {"id": "orchestrator", "status": "working", "task": "Managing client pipeline", "output": "Pipeline: ACTIVE\n3 clients in queue\nStripe: live\nWebhook: deployed"},
-        {"id": "intake", "status": "working", "task": "Monitoring inquiries", "output": "Supabase: polling every 30m\n3 inquiries received"},
-        {"id": "researcher", "status": "idle", "task": "Awaiting intake", "output": "Ready for next project"},
-        {"id": "planner", "status": "idle", "task": "Awaiting approval", "output": "Plan drafted for #004"},
-        {"id": "builder", "status": "idle", "task": "Awaiting plan approval", "output": "Stack: Cloudflare + HTML/CSS"},
-        {"id": "qa", "status": "idle", "task": "Awaiting build", "output": "47 checks ready"}
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Managing client pipeline",
+          "output": "Pipeline: ACTIVE\n3 clients in queue\nStripe: live\nWebhook: deployed"
+        },
+        {
+          "id": "intake",
+          "status": "working",
+          "task": "Monitoring inquiries",
+          "output": "Supabase: polling every 30m\n3 inquiries received"
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "task": "Awaiting intake",
+          "output": "Ready for next project"
+        },
+        {
+          "id": "planner",
+          "status": "idle",
+          "task": "Awaiting approval",
+          "output": "Plan drafted for #004"
+        },
+        {
+          "id": "builder",
+          "status": "idle",
+          "task": "Awaiting plan approval",
+          "output": "Stack: Cloudflare + HTML/CSS"
+        },
+        {
+          "id": "qa",
+          "status": "idle",
+          "task": "Awaiting build",
+          "output": "47 checks ready"
+        }
       ],
-      "metrics": {"tasks": 12, "prs": 0, "agents": 6, "bars": {"intake": 30, "build": 0, "qa": 0}}
+      "metrics": {
+        "tasks": 12,
+        "prs": 0,
+        "agents": 6,
+        "bars": {
+          "intake": 30,
+          "build": 0,
+          "qa": 0
+        }
+      }
     },
     "loveflix": {
       "name": "Loveflix",
       "agents": [
-        {"id": "orchestrator", "status": "working", "task": "Maintaining LoveFlix platform", "output": "LoveFlix: LIVE\n58 commits this week\n3 open PRs\n0 open issues"},
-        {"id": "auditor", "status": "working", "task": "Scanning for dead routes", "output": "Scanning 847 files\n14 hardcoded strings found\nReport drafted"},
-        {"id": "deployer", "status": "done", "task": "PR #130 merged", "output": "WebSocket fallback: deployed\nMessage notifications: working"},
-        {"id": "tester", "status": "idle", "task": "Awaiting next PR", "output": "Test suite: 47 checks\nReady for next deploy"},
-        {"id": "monitor", "status": "working", "task": "Watching production", "output": "Uptime: 99.8%\nStream health: OK\nActive users: 12"},
-        {"id": "docs", "status": "idle", "task": "Docs up to date", "output": "API docs: current\nChangelog: up to date"}
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Fixing top 3 audit issues",
+          "output": "Audit fixes in progress\\nTarget: story map button removal\\nTarget: dead button handlers\\nTarget: hardcoded strings",
+          "bubble": "Fixing"
+        },
+        {
+          "id": "auditor",
+          "status": "working",
+          "task": "Scanning for dead routes",
+          "output": "Scanning 847 files\n14 hardcoded strings found\nReport drafted"
+        },
+        {
+          "id": "deployer",
+          "status": "done",
+          "task": "PR #130 merged",
+          "output": "WebSocket fallback: deployed\nMessage notifications: working"
+        },
+        {
+          "id": "tester",
+          "status": "idle",
+          "task": "Awaiting next PR",
+          "output": "Test suite: 47 checks\nReady for next deploy"
+        },
+        {
+          "id": "monitor",
+          "status": "working",
+          "task": "Watching production",
+          "output": "Uptime: 99.8%\nStream health: OK\nActive users: 12"
+        },
+        {
+          "id": "docs",
+          "status": "idle",
+          "task": "Docs up to date",
+          "output": "API docs: current\nChangelog: up to date"
+        }
       ],
-      "metrics": {"tasks": 58, "prs": 3, "agents": 6, "bars": {"audit": 72, "deploy": 90, "monitor": 98, "docs": 40}}
+      "metrics": {
+        "tasks": 58,
+        "prs": 3,
+        "agents": 6,
+        "bars": {
+          "audit": 72,
+          "deploy": 90,
+          "monitor": 98,
+          "docs": 40
+        }
+      }
     },
     "dropship": {
       "name": "Dropship Pipeline",
       "agents": [
-        {"id": "orchestrator", "status": "working", "task": "Managing full dropship pipeline", "output": "Pipeline: INITIALIZED\n11 files built\nAwaiting API credentials"},
-        {"id": "discovery", "status": "idle", "task": "Awaiting TikTok API", "output": "Trend scanner: INACTIVE"},
-        {"id": "sourcing", "status": "idle", "task": "Awaiting discovery", "output": "TeamDrop: STANDBY"},
-        {"id": "builder", "status": "idle", "task": "Awaiting sourced product", "output": "Store builder: IDLE"},
-        {"id": "social", "status": "idle", "task": "Awaiting store", "output": "Social: STANDBY"},
-        {"id": "analytics", "status": "idle", "task": "Awaiting data", "output": "Analytics: STANDBY"}
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Managing full dropship pipeline",
+          "output": "Pipeline: INITIALIZED\n11 files built\nAwaiting API credentials"
+        },
+        {
+          "id": "discovery",
+          "status": "idle",
+          "task": "Awaiting TikTok API",
+          "output": "Trend scanner: INACTIVE"
+        },
+        {
+          "id": "sourcing",
+          "status": "idle",
+          "task": "Awaiting discovery",
+          "output": "TeamDrop: STANDBY"
+        },
+        {
+          "id": "builder",
+          "status": "idle",
+          "task": "Awaiting sourced product",
+          "output": "Store builder: IDLE"
+        },
+        {
+          "id": "social",
+          "status": "idle",
+          "task": "Awaiting store",
+          "output": "Social: STANDBY"
+        },
+        {
+          "id": "analytics",
+          "status": "idle",
+          "task": "Awaiting data",
+          "output": "Analytics: STANDBY"
+        }
       ],
-      "metrics": {"tasks": 9, "prs": 0, "agents": 6, "bars": {"store": 25}}
+      "metrics": {
+        "tasks": 9,
+        "prs": 0,
+        "agents": 6,
+        "bars": {
+          "store": 25
+        }
+      }
     }
   },
   "events": [
-    {"agent": "SYSTEM", "msg": "🗑️ Cron job removed — rooms are permanent now"},
-    {"agent": "SYSTEM", "msg": "Renamed Loveflix room — switched to it"},
-    {"agent": "BUILD", "msg": "Dropship prompts + templates + docs built — 11 files"},
-    {"agent": "BUKIMIND", "msg": "🏗️ New project: Dropship Pipeline"},
-    {"agent": "BUKIMIND", "msg": "🎉 Multi-room office live: HQ + 3 rooms"}
+    {
+      "agent": "AUDIT",
+      "msg": "Fixing top 3 audit issues \u2014 starting with story map button"
+    },
+    {
+      "agent": "SYSTEM",
+      "msg": "\ud83d\uddd1\ufe0f Cron job removed \u2014 rooms are permanent now"
+    },
+    {
+      "agent": "SYSTEM",
+      "msg": "Renamed Loveflix room \u2014 switched to it"
+    },
+    {
+      "agent": "BUILD",
+      "msg": "Dropship prompts + templates + docs built \u2014 11 files"
+    },
+    {
+      "agent": "BUKIMIND",
+      "msg": "\ud83c\udfd7\ufe0f New project: Dropship Pipeline"
+    },
+    {
+      "agent": "BUKIMIND",
+      "msg": "\ud83c\udf89 Multi-room office live: HQ + 3 rooms"
+    }
   ]
 }
