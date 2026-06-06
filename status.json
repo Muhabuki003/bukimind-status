@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T22:56:50Z",
+  "updated": "2026-06-06T22:57:28Z",
   "current_room": "hq",
   "rooms": {
     "hq": {
@@ -177,6 +177,10 @@
   },
   "events": [
     {
+      "agent": "BUKIMIND",
+      "msg": "\ud83c\udf89 Multi-room office live: HQ + 3 rooms \u2014 click to explore!"
+    },
+    {
       "agent": "BUILD",
       "msg": "Multi-room office deployed: HQ + 3 rooms"
     },
@@ -195,10 +199,6 @@
     {
       "agent": "BUILD",
       "msg": "BOOKISTUDIO Stripe products created"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "Cloudflare webhook Worker deployed"
     }
   ]
 }
