@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-06T23:01:38Z",
-  "current_room": "hq",
+  "updated": "2026-06-06T23:01:42Z",
+  "current_room": "dropship",
   "rooms": {
     "hq": {
       "name": "BUKIMIND HQ",
@@ -225,6 +225,10 @@
   },
   "events": [
     {
+      "agent": "BUILD",
+      "msg": "Reading DROPSHIPPING.md from automation plans"
+    },
+    {
       "agent": "BUKIMIND",
       "msg": "\ud83c\udfd7\ufe0f New project: Dropship Pipeline"
     },
@@ -243,10 +247,6 @@
     {
       "agent": "BUILD",
       "msg": "Multi-room office architecture: status.json schema redesigned for rooms"
-    },
-    {
-      "agent": "SYSTEM",
-      "msg": "Start Project trigger armed \u2014 waiting for your command"
     }
   ]
 }
