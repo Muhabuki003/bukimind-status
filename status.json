@@ -1,18 +1,18 @@
 {
-  "updated": "2026-06-06T20:52:28Z",
+  "updated": "2026-06-06T21:10:19Z",
   "agents": [
     {
       "id": "orchestrator",
       "status": "working",
-      "task": "Active automation: 41 commits this week across 6 repos",
-      "output": "LOVEFLIX: 26 commits (PR #130 merged — live notifications stack with WS+polling). bukimind_office: 4 commits (file uploads). hermes-automation-plans: 4 commits (pipeline docs). HELPME: 3 commits (StudyBuddy widget). BOOKIWEBSTUDIO: 2 commits (RLS fix merged). scanme: 2 commits (new landing page). Automation cycling.",
-      "bubble": "41 commits across 6 repos"
+      "task": "Active automation: 40 commits this week across repos",
+      "output": "LOVEFLIX: 25 commits (PR #130 merged — live notifications stack with WS+polling complete). hermes-automation-plans: pipeline docs on main (PR #1 merged). BOOKISTUDIO: 3 unread inquiries, endpoint reachable again (DNS resolved). Automation cycling.",
+      "bubble": "40 commits this week"
     },
     {
       "id": "auditor",
       "status": "working",
       "task": "Auditing LOVEFLIX & infrastructure health",
-      "output": "LOVEFLIX latest: PR #130 merged — live notifications stack (WS+polling) complete. 3 open PRs (docs #125, security #96, editor #18). 0 open issues. <span class=\"ok\">Repo healthy.</span> <span class=\"wn\">Supabase NXDOMAIN recurring — BOOKISTUDIO intake endpoint unreachable.</span>"
+      "output": "LOVEFLIX latest: PR #130 merged — live notifications stack (WS+polling) complete. 3 open PRs (docs #125, security #96, editor #18). 0 pure open issues. <span class=\"ok\">Repo healthy.</span> <span class=\"ok\">Supabase DNS resolved — BOOKISTUDIO intake endpoint reachable again.</span>"
     },
     {
       "id": "researcher",
@@ -22,9 +22,9 @@
     },
     {
       "id": "builder",
-      "status": "idle",
-      "task": "BOOKISTUDIO pipeline blocked — Supabase NXDOMAIN",
-      "output": "<span class=\"wn\">Supabase DNS NXDOMAIN — intake endpoint unreachable.</span> Last known state: 3 unread intakes. BOOKIWEBSTUDIO PR #7 (RLS fix) merged this week. Pipeline cannot proceed until Supabase DNS resolves."
+      "status": "working",
+      "task": "3 unread BOOKISTUDIO inquiries — pipeline idle",
+      "output": "Supabase DNS resolved — intake endpoint reachable. 3 unread inquiries (ids: 9, 11, 14). Pipeline state: empty (no active build). hermes-automation-plans pipeline docs on main. <span class=\"wn\">Pipeline awaiting manual intake processing or automated webhook trigger.</span>"
     },
     {
       "id": "content",
@@ -41,36 +41,36 @@
   ],
   "events": [
     {
+      "agent": "SYSTEM",
+      "msg": "Supabase DNS resolved — BOOKISTUDIO intake endpoint restored. 3 unread inquiries pending (ids: 9, 11, 14)."
+    },
+    {
+      "agent": "AUDIT",
+      "msg": "LoveFlix: 40 commits this week, PR #130 merged (WS+polling notifications complete), 3 open PRs (#125 docs, #96 security, #18 editor), 0 pure issues"
+    },
+    {
+      "agent": "BUILD",
+      "msg": "BOOKISTUDIO: 3 unread inquiries, pipeline state empty, pipeline docs landed in hermes-automation-plans (PR #1)"
+    },
+    {
+      "agent": "AUDIT",
+      "msg": "hermes-automation-plans PR #1 merged — bookistudio pipeline documentation on main"
+    },
+    {
+      "agent": "AUDIT",
+      "msg": "LoveFlix PRs #128-#130 merged — live notifications stack (WS+polling) complete. 3 open PRs remain"
+    },
+    {
       "agent": "BUKIMIND",
-      "msg": "41 commits this week across 6 repos: LOVEFLIX (26), bukimind_office (4), hermes-automation-plans (4), HELPME (3), BOOKIWEBSTUDIO (2), scanme (2)"
-    },
-    {
-      "agent": "AUDIT",
-      "msg": "LoveFlix: PR #130 merged — live notifications stack (WS+polling) complete. 0 issues, 3 open PRs (#125 docs, #96 security, #18 editor)"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "BOOKISTUDIO Supabase NXDOMAIN recurring — intake endpoint unreachable, pipeline blocked"
-    },
-    {
-      "agent": "AUDIT",
-      "msg": "LoveFlix: 0 open issues, 3 open PRs (#125 docs, #96 security, #18 editor), PRs #128-#130 merged — live notifications stack complete"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "hermes-automation-plans PR #1 merged — bookistudio pipeline docs landed on main"
-    },
-    {
-      "agent": "AUDIT",
-      "msg": "New repo HELPME launched — StudyBuddy AI widget, 3 commits"
+      "msg": "25 LoveFlix commits this week — notifications milestone complete; 15 more commits across other repos"
     }
   ],
   "metrics": {
-    "tasks": 41,
+    "tasks": 40,
     "prs": 3,
     "bars": {
-      "loveflix": 92,
-      "bookistudio": 72,
+      "loveflix": 95,
+      "bookistudio": 74,
       "dropship": 0,
       "content": 0
     }
