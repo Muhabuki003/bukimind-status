@@ -1,24 +1,25 @@
 {
-  "updated": "2026-06-06T13:55:00Z",
+  "updated": "2026-06-06T17:40:00Z",
   "agents": [
     {
       "id": "orchestrator",
       "status": "working",
-      "task": "Building BOOKISTUDIO automation pipeline",
-      "output": "Connected to 9 repos. Active: LOVEFLIX (58 commits/wk), hermes-automation-plans (10 commits), BOOKIWEBSTUDIO (3 commits). Stripe products live. Cloudflare Worker deployed. Supabase pipeline_state table created.",
-      "bubble": "10 repos connected"
+      "task": "Orchestrating automation pipeline across 9 repos",
+      "output": "LOVEFLIX: 40 commits/wk, PR #130 merged (live message notifications). BOOKISTUDIO: pipeline PR #1 merged to main. 3 client inquiries pending in Supabase. Stripe webhook Worker deployed. Automation plans live.",
+      "bubble": "Pipeline PR merged"
     },
     {
       "id": "auditor",
       "status": "working",
-      "task": "Auditing LOVEFLIX infrastructure",
-      "output": "Latest: Merge PR #130 — polling fallback for WebSocket failures. 3 open PRs. 0 open issues. 58 commits this week. repo: Muhabuki003/LOVEFLIX"
+      "task": "Auditing LOVEFLIX & infrastructure health",
+      "output": "LOVEFLIX latest: Merge PR #130 feat/live-message-notifications (06:15 UTC). 3 open PRs. 0 open issues. 40 commits this week. hermes-automation-plans: PR #1 merged (bookistudio pipeline). repo: Muhabuki003/LOVEFLIX"
     },
     {
       "id": "builder",
       "status": "working",
       "task": "BOOKISTUDIO pipeline active",
-      "output": "3 client inquiries in Supabase. Intake monitor running every 30m. Stripe products live (Deposit + Remaining). Webhook Worker deployed. Awaiting webhook signing secret to complete automation."
+      "output": "3 unread client inquiries in Supabase. Pipeline PR merged to main. No active pipeline_state entries yet — awaiting intake processing trigger. Stripe products live (Deposit + Remaining). Cloudflare webhook Worker deployed.",
+      "bubble": "3 inquiries waiting"
     },
     {
       "id": "researcher",
@@ -40,18 +41,19 @@
     }
   ],
   "events": [
+    { "agent": "BUILD", "msg": "BOOKISTUDIO pipeline PR merged to main branch" },
+    { "agent": "AUDIT", "msg": "LoveFlix PR #130 merged — live message notifications deployed" },
+    { "agent": "BUILD", "msg": "3 unread client inquiries in Supabase — awaiting intake trigger" },
     { "agent": "BUKIMIND", "msg": "Office status feed initialized — 6 agents online" },
-    { "agent": "BUILD", "msg": "BOOKISTUDIO Stripe products created" },
-    { "agent": "BUILD", "msg": "Cloudflare webhook Worker deployed" },
-    { "agent": "BUILD", "msg": "Supabase pipeline_state table live" },
-    { "agent": "AUDIT", "msg": "Auditing LOVEFLIX — 58 commits this week, 3 open PRs" }
+    { "agent": "BUILD", "msg": "Stripe products live — Deposit + Remaining configured" },
+    { "agent": "BUILD", "msg": "Cloudflare webhook Worker deployed" }
   ],
   "metrics": {
-    "tasks": 83,
+    "tasks": 40,
     "prs": 3,
     "bars": {
-      "loveflix": 72,
-      "bookistudio": 45,
+      "loveflix": 78,
+      "bookistudio": 55,
       "dropship": 0,
       "content": 0
     }
