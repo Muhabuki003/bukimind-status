@@ -1,6 +1,10 @@
 {
-  "updated": "2026-06-06T23:12:05Z",
+  "updated": "2026-06-06T23:20:11Z",
   "events": [
+    {
+      "agent": "SYSTEM",
+      "msg": "Cache-bust: added flat data fallback \u2014 office should be stable now"
+    },
     {
       "agent": "BUILD",
       "msg": "Prompts + templates + docs built \u2014 11 files pushed"
@@ -20,10 +24,6 @@
     {
       "agent": "BUKIMIND",
       "msg": "40 commits across all repos this week \u2014 largest contributor LOVEFLIX"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "Reading DROPSHIPPING.md from automation plans"
     }
   ],
   "rooms": {
@@ -90,5 +90,5 @@
       }
     }
   },
-  "current_room": "default"
+  "current_room": "hq"
 }
