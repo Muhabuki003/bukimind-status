@@ -1,257 +1,78 @@
 {
-  "updated": "2026-06-06T23:01:42Z",
-  "current_room": "dropship",
-  "rooms": {
-    "hq": {
-      "name": "BUKIMIND HQ",
-      "agents": [],
-      "metrics": {
-        "tasks": 83,
-        "prs": 3,
-        "rooms": 4,
-        "bars": {
-          "loveflix": 72,
-          "bookistudio": 45,
-          "chronos": 0,
-          "dropship": 0
-        }
-      }
+  "updated": "2026-06-06T23:37:00Z",
+  "agents": [
+    {
+      "id": "orchestrator",
+      "status": "working",
+      "task": "Active automation: 40 commits this week",
+      "output": "LOVEFLIX: PR #130 merged (34e6d40) — WS polling fallback live. 3 open PRs, 0 issues. hermes-automation-plans: pipeline on main (9c22f78). BOOKISTUDIO: Supabase online — 3 unread intakes. 40 commits this week across all repos.",
+      "bubble": "40 commits"
     },
-    "bukimind": {
-      "name": "BUKIMIND HQ",
-      "agents": [
-        {
-          "id": "orchestrator",
-          "status": "working",
-          "task": "Supervising all rooms",
-          "output": "BUKIMIND CORE\n3 rooms active\nmulti-room office: BUILDING\nEvents flowing: OK",
-          "bubble": "3 rooms"
-        },
-        {
-          "id": "system",
-          "status": "working",
-          "task": "Monitoring infrastructure",
-          "output": "Hermes gateway: OK\nCron jobs: 3 active\nStatus feed: live"
-        },
-        {
-          "id": "gateway",
-          "status": "working",
-          "task": "Bridge health check",
-          "output": "Telegram: connected\nWhatsApp: connected\nEmail: connected"
-        },
-        {
-          "id": "storage",
-          "status": "idle",
-          "task": "Standing by",
-          "output": "Supabase: online\nGitHub: connected\nStatus: nominal"
-        },
-        {
-          "id": "deploy",
-          "status": "idle",
-          "task": "Awaiting build",
-          "output": "Cloudflare: ready\nLast deploy: office multi-room"
-        },
-        {
-          "id": "metrics",
-          "status": "working",
-          "task": "Aggregating room data",
-          "output": "3 rooms: bukimind, bookistudio, loveflix\nTotal agents: 16\nEvents tracked: 12"
-        }
-      ],
-      "metrics": {
-        "tasks": 83,
-        "prs": 3,
-        "agents": 6,
-        "bars": {
-          "loveflix": 72,
-          "bookistudio": 45,
-          "chronos": 0
-        }
-      }
+    {
+      "id": "auditor",
+      "status": "working",
+      "task": "Auditing LOVEFLIX & infrastructure health",
+      "output": "LoveFlix latest: 34e6d40 — PR #130 merged, WS polling fallback deployed. 3 open PRs, 0 issues. <span class=\"ok\">40 commits in 7 days.</span> <span class=\"ok\">Supabase online — 3 unread BOOKISTUDIO intakes (ids 14, 11, 9).</span> <span class=\"ok\">hermes-automation-plans on main (9c22f78).</span>"
     },
-    "bookistudio": {
-      "name": "BOOKISTUDIO Pipeline",
-      "agents": [
-        {
-          "id": "orchestrator",
-          "status": "working",
-          "task": "Managing client pipeline",
-          "output": "Pipeline: ACTIVE\n3 clients in queue\nAwaiting plan approval for #004\nStripe: live\nWebhook: deployed",
-          "bubble": "Pipeline"
-        },
-        {
-          "id": "intake",
-          "status": "working",
-          "task": "Monitoring inquiries",
-          "output": "Supabase: polling every 30m\n3 inquiries received\n0 unread"
-        },
-        {
-          "id": "researcher",
-          "status": "idle",
-          "task": "Awaiting intake",
-          "output": "Last research: Rayzor Sharp Barbershop\nReady for next project"
-        },
-        {
-          "id": "planner",
-          "status": "idle",
-          "task": "Awaiting approval",
-          "output": "Plan drafted for intake #004\nWaiting on Am"
-        },
-        {
-          "id": "builder",
-          "status": "idle",
-          "task": "Awaiting plan approval",
-          "output": "Last build: Rayzor Sharp Barbershop\nStack: Cloudflare + HTML/CSS"
-        },
-        {
-          "id": "qa",
-          "status": "idle",
-          "task": "Awaiting build",
-          "output": "47 checks ready\nCoverage target: 90%"
-        }
-      ],
-      "metrics": {
-        "tasks": 12,
-        "prs": 0,
-        "agents": 6,
-        "bars": {
-          "intake": 30,
-          "research": 0,
-          "build": 0,
-          "qa": 0
-        }
-      }
+    {
+      "id": "researcher",
+      "status": "idle",
+      "task": "Integration pending",
+      "output": "No TikTok/social API connected yet. Awaiting credentials to enable dropship market research."
     },
-    "loveflix": {
-      "name": "LOVEFLIX Studio",
-      "agents": [
-        {
-          "id": "orchestrator",
-          "status": "working",
-          "task": "Maintaining LoveFlix platform",
-          "output": "LoveFlix: LIVE\n58 commits this week\n3 open PRs\n0 open issues",
-          "bubble": "Active"
-        },
-        {
-          "id": "auditor",
-          "status": "working",
-          "task": "Scanning for dead routes",
-          "output": "Scanning 847 files\n14 hardcoded strings found\n7 dead button handlers\n3 missing routes\nReport drafted"
-        },
-        {
-          "id": "deployer",
-          "status": "done",
-          "task": "PR #130 merged",
-          "output": "WebSocket fallback: deployed\nPolling recovery: live\nMessage notifications: working"
-        },
-        {
-          "id": "tester",
-          "status": "idle",
-          "task": "Awaiting next PR",
-          "output": "Test suite: 47 checks\nCoverage: 90%\nReady for next deploy"
-        },
-        {
-          "id": "monitor",
-          "status": "working",
-          "task": "Watching production",
-          "output": "Uptime: 99.8%\nActive users: 12\nStream health: OK"
-        },
-        {
-          "id": "docs",
-          "status": "idle",
-          "task": "Documentation up to date",
-          "output": "API docs: current\nSetup guide: complete\nChangelog: up to date"
-        }
-      ],
-      "metrics": {
-        "tasks": 58,
-        "prs": 3,
-        "agents": 6,
-        "bars": {
-          "audit": 72,
-          "deploy": 90,
-          "monitor": 98,
-          "docs": 40
-        }
-      }
+    {
+      "id": "builder",
+      "status": "working",
+      "task": "3 unread BOOKISTUDIO intakes",
+      "output": "Supabase inquiries: 3 unread (id 14 Jun 6, id 11 Jun 2, id 9 May 13). No new intakes since last cycle. Pipeline docs on main in hermes-automation-plans. <span class=\"ok\">Intake endpoint online.</span> <span class=\"wn\">3 intakes awaiting manual review.</span>"
     },
-    "dropship": {
-      "name": "Dropship Pipeline",
-      "agents": [
-        {
-          "id": "orchestrator",
-          "status": "working",
-          "task": "Managing full dropship pipeline",
-          "output": "DROPSHIP CORE\nPipeline: INITIALIZED\nReading DROPSHIPPING.md\n8 sub-agents mapped to 6 desks\nWaiting for TikTok API access"
-        },
-        {
-          "id": "discovery",
-          "status": "idle",
-          "task": "Awaiting TikTok API credentials",
-          "output": "TikTok trend scanner: INACTIVE\nNeeds: TikTok API key or scraper setup\nWill scan for viral products with >500K views"
-        },
-        {
-          "id": "sourcing",
-          "status": "idle",
-          "task": "Awaiting discovery input",
-          "output": "TeamDrop/Alibaba sourcer: STANDBY\nWill find product pricing, variants, shipping times"
-        },
-        {
-          "id": "builder",
-          "status": "idle",
-          "task": "Awaiting sourced product",
-          "output": "Store builder: IDLE\nShopify + Brand + Domain combined\nWill generate brand identity + headless frontend"
-        },
-        {
-          "id": "social",
-          "status": "idle",
-          "task": "Awaiting store to promote",
-          "output": "Social poster: STANDBY\nTikTok + Instagram accounts ready\nContent downloader + scheduler idle"
-        },
-        {
-          "id": "analytics",
-          "status": "idle",
-          "task": "Awaiting content data",
-          "output": "Analytics tracker: STANDBY\nWill monitor post engagement\nWill recommend paid ads on threshold breach"
-        }
-      ],
-      "metrics": {
-        "tasks": 9,
-        "prs": 0,
-        "agents": 6,
-        "bars": {
-          "discovery": 0,
-          "sourcing": 0,
-          "store": 0,
-          "content": 0
-        }
-      }
+    {
+      "id": "content",
+      "status": "idle",
+      "task": "Integration pending",
+      "output": "No social posting API connected yet. Content agent standing by."
+    },
+    {
+      "id": "qa",
+      "status": "idle",
+      "task": "Awaiting build",
+      "output": "Will run after Builder completes a project. Currently idle."
+    }
+  ],
+  "metrics": {
+    "tasks": 40,
+    "prs": 3,
+    "bars": {
+      "loveflix": 74,
+      "bookistudio": 45,
+      "dropship": 0,
+      "content": 0
     }
   },
   "events": [
+    {
+      "agent": "AUDIT",
+      "msg": "LoveFlix: PR #130 merged (34e6d40) — WS polling fallback live. 3 open PRs, 0 issues. 40 commits this week."
+    },
+    {
+      "agent": "BUILD",
+      "msg": "hermes-automation-plans: pipeline docs merged to main (9c22f78)."
+    },
+    {
+      "agent": "BUKIMIND",
+      "msg": "Bookistudio pipeline: 3 unread intakes waiting (id 14 Jun 6, id 11 Jun 2, id 9 May 13)"
+    },
+    {
+      "agent": "BUKIMIND",
+      "msg": "40 commits across all repos this week — largest contributor LOVEFLIX"
+    },
     {
       "agent": "BUILD",
       "msg": "Reading DROPSHIPPING.md from automation plans"
     },
     {
       "agent": "BUKIMIND",
-      "msg": "\ud83c\udfd7\ufe0f New project: Dropship Pipeline"
-    },
-    {
-      "agent": "BUKIMIND",
-      "msg": "\ud83c\udf89 Multi-room office live: HQ + 3 rooms \u2014 click to explore!"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "Multi-room office deployed: HQ + 3 rooms"
-    },
-    {
-      "agent": "BUKIMIND",
-      "msg": "\ud83c\udfd7\ufe0f Building multi-room office \u2014 HQ + room system"
-    },
-    {
-      "agent": "BUILD",
-      "msg": "Multi-room office architecture: status.json schema redesigned for rooms"
+      "msg": "🏗️ New project: Dropship Pipeline"
     }
   ]
 }
