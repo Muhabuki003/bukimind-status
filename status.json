@@ -1,18 +1,18 @@
 {
-  "updated": "2026-06-06T21:28:59Z",
+  "updated": "2026-06-06T22:45:00Z",
   "agents": [
     {
       "id": "orchestrator",
       "status": "working",
-      "task": "Active automation: 40 commits this week across repos",
-      "output": "LOVEFLIX: 25 commits this week (PRs #126-#130 merged — live notifications WS+polling complete, notifications milestone done). hermes-automation-plans: pipeline docs on main (PR #1 merged). BOOKISTUDIO: Supabase DNS down — intake unreachable, pipeline stalled. Automation cycling.",
-      "bubble": "40 commits this week"
+      "task": "Active automation: 30 commits this week across repos",
+      "output": "LOVEFLIX: ~15 commits (PRs #115-#130 merged — live notifications WS+polling complete, notifications milestone done). hermes-automation-plans: pipeline docs on main (PR #1 merged). BOOKISTUDIO: Supabase reachable — 3 unread intakes. bukimind_office, HELPME, BOOKIWEBSTUDIO, scanme also active.",
+      "bubble": "30 commits this week"
     },
     {
       "id": "auditor",
       "status": "working",
       "task": "Auditing LOVEFLIX & infrastructure health",
-      "output": "LOVEFLIX latest: PR #130 merged — polling fallback for WS (notifications complete). 3 open PRs (docs #125, security #96, editor #18). 0 pure open issues. <span class=\"ok\">Repo healthy — notifications milestone delivered.</span> <span class=\"wn\">Supabase DNS not resolving — BOOKISTUDIO intake endpoint unreachable (was reachable last cycle).</span>"
+      "output": "LOVEFLIX latest: PR #130 merged — polling fallback for WS (notifications milestone complete). 3 open PRs (docs, security, editor). 0 open issues. <span class=\"ok\">Repo healthy — notifications milestone delivered.</span> <span class=\"ok\">Supabase DNS resolved — BOOKISTUDIO intake endpoint reachable again (3 unread intakes).</span>"
     },
     {
       "id": "researcher",
@@ -23,8 +23,8 @@
     {
       "id": "builder",
       "status": "idle",
-      "task": "Supabase DNS down — pipeline stalled",
-      "output": "Supabase not resolving (xlcyzcuhltfifeyqomgn.supabase.co — DNS failure). Cannot query inquiries table. Pipeline docs landed in hermes-automation-plans (BOOKISTUDIO.md) but no active builds. <span class=\"wn\">Pipeline stalled — DNS/network issue blocking intake check.</span>"
+      "task": "Supabase reachable — intakes pending review",
+      "output": "Supabase project rrunczvxquobjgeghclh is online. Inquiries table: 13 total, 3 unread (latest: today 17:36 UTC from adre8). Pipeline docs landed in hermes-automation-plans but no active build jobs. <span class=\"ok\">Intake endpoint online.</span> <span class=\"wn\">3 unread intakes awaiting manual review.</span>"
     },
     {
       "id": "content",
@@ -41,12 +41,8 @@
   ],
   "events": [
     {
-      "agent": "AUDIT",
-      "msg": "LoveFlix: PRs #126-#130 merged — live notifications stack (WS+polling) complete. 40 commits this week, 3 open PRs, 0 pure issues"
-    },
-    {
       "agent": "SYSTEM",
-      "msg": "Supabase DNS down — BOOKISTUDIO intake endpoint unreachable (was reachable previous cycle). Pipeline stalled."
+      "msg": "Supabase DNS resolved — BOOKISTUDIO intake endpoint reachable at rrunczvxquobjgeghclh.supabase.co. 3 unread inquiries found."
     },
     {
       "agent": "BUILD",
@@ -54,23 +50,27 @@
     },
     {
       "agent": "AUDIT",
-      "msg": "AUDIT: scanme repo (2 commits), HELPME (StudyBuddy widget, 3 commits), BOOKIWEBSTUDIO (RLS fix, 1 commit) all active"
+      "msg": "scanme repo (2 commits), HELPME (StudyBuddy widget, 3 commits), BOOKIWEBSTUDIO (RLS fix, 1 commit) all active"
     },
     {
       "agent": "BUKIMIND",
-      "msg": "25 LoveFlix commits this week — notifications milestone complete; 15 more commits across other repos (hermes-automation-plans pipeline docs, bukimind_office, HELPME study buddy, scanme)"
+      "msg": "30 commits across all repos this week — LoveFlix notifications milestone complete, BOOKISTUDIO intake back online, pipeline docs landed in automation plans"
     },
     {
       "agent": "AUDIT",
       "msg": "LoveFlix latest: PR #130 merged — polling fallback for WebSocket silent failures (notifications milestone done)"
+    },
+    {
+      "agent": "AUDIT",
+      "msg": "BOOKISTUDIO intake restored: 3 unread inquiries (adre8 today, Adrien June 2, Jace May 13). 10 previously read."
     }
   ],
   "metrics": {
-    "tasks": 40,
+    "tasks": 30,
     "prs": 3,
     "bars": {
-      "loveflix": 96,
-      "bookistudio": 68,
+      "loveflix": 97,
+      "bookistudio": 72,
       "dropship": 0,
       "content": 0
     }
