@@ -1,18 +1,18 @@
 {
-  "updated": "2026-06-06T22:00:00Z",
+  "updated": "2026-06-06T22:30:00Z",
   "agents": [
     {
       "id": "orchestrator",
       "status": "working",
-      "task": "Active automation: 40 commits this week across 6 repos",
-      "output": "LOVEFLIX: 25 commits this week. PR #130 merged (polling fallback for WS failures). BOOKISTUDIO: pipeline PR #1 merged, Supabase intake endpoint unreachable (NXDOMAIN). hermes-automation-plans: PR #1 merged (bookistudio pipeline). bukimind_office: 4 commits (fresh deployment). Automation cycling.",
-      "bubble": "40 commits across 6 repos"
+      "task": "Active automation: 42 commits this week across 6 repos",
+      "output": "LOVEFLIX: 26 commits (PRs #126-#130 merged — live notifications stack with WS+polling). bukimind_office: 4 commits (fresh deployment). hermes-automation-plans: 4 commits (pipeline docs). HELPME: 3 commits (StudyBuddy widget). BOOKIWEBSTUDIO: 2 commits (RLS fix + privacy policy). scanme: 2 commits (new landing page). Automation cycling.",
+      "bubble": "42 commits across 6 repos"
     },
     {
       "id": "auditor",
       "status": "working",
       "task": "Auditing LOVEFLIX & infrastructure health",
-      "output": "LOVEFLIX latest: Merge PR #130 feat/live-message-notifications — polling fallback fix. 3 open PRs. 0 open issues. <span class=\"ok\">Repo healthy. 0 pending issues.</span> Supabase project DNS unresolved (objrjyzcmbmtzschdiyd.supabase.co NXDOMAIN)."
+      "output": "LOVEFLIX latest: Merge PR #130 feat/live-message-notifications — polling fallback for WS. 3 open PRs. 0 open issues. <span class=\"ok\">Repo healthy. 0 pending issues.</span> <span class=\"wn\">Supabase still NXDOMAIN — intake endpoint unreachable since last check.</span>"
     },
     {
       "id": "researcher",
@@ -23,8 +23,8 @@
     {
       "id": "builder",
       "status": "working",
-      "task": "BOOKISTUDIO pipeline active, intake monitoring down",
-      "output": "Pipeline PR #1 merged to main. <span class=\"wn\">Supabase host unreachable (NXDOMAIN) — cannot count unread intakes.</span> hermes-automation-plans active with pipeline docs. Stripe products configured."
+      "task": "BOOKISTUDIO pipeline live, Supabase intake still down",
+      "output": "Pipeline PR #1 merged to main. <span class=\"wn\">Supabase host unreachable (NXDOMAIN persists) — cannot count unread intakes for 2nd consecutive check.</span> hermes-automation-plans active with pipeline docs. Stripe products configured. BOOKIWEBSTUDIO PRs #7 (RLS fix) and #9 (privacy policy) merged."
     },
     {
       "id": "content",
@@ -42,35 +42,35 @@
   "events": [
     {
       "agent": "BUKIMIND",
-      "msg": "Office status: 40 commits this week, 3 open PRs, Supabase endpoint NXDOMAIN"
+      "msg": "42 commits this week across 6 repos: LOVEFLIX (26), bukimind_office (4), hermes-automation-plans (4), HELPME (3), BOOKIWEBSTUDIO (2), scanme (2)"
     },
     {
       "agent": "AUDIT",
-      "msg": "LoveFlix: 0 open issues, 3 open PRs, PR #130 (notifications polling fix) deployed"
+      "msg": "LoveFlix: 0 open issues, 3 open PRs, PRs #126-#130 merged — live notifications/WS+polling stack deployed"
     },
     {
       "agent": "BUILD",
-      "msg": "BOOKISTUDIO: pipeline PR merged, Supabase intake unreachable — DNS failure"
+      "msg": "BOOKISTUDIO: Supabase DNS NXDOMAIN persists — unread intakes cannot be queried"
     },
     {
       "agent": "BUILD",
-      "msg": "hermes-automation-plans PR #1 merged — bookistudio pipeline docs landed"
+      "msg": "hermes-automation-plans PR #1 merged — bookistudio pipeline docs landed on main"
     },
     {
       "agent": "AUDIT",
-      "msg": "LoveFlix PR #130 merged — live message notifications with polling fallback"
+      "msg": "New repo HELPME launched — StudyBuddy AI widget PRs #1-#2 merged"
     },
     {
       "agent": "SYSTEM",
-      "msg": "Start Project trigger armed — waiting for your command"
+      "msg": "scanme repo created — 2 commits for landing page"
     }
   ],
   "metrics": {
-    "tasks": 40,
+    "tasks": 42,
     "prs": 3,
     "bars": {
-      "loveflix": 85,
-      "bookistudio": 60,
+      "loveflix": 88,
+      "bookistudio": 65,
       "dropship": 0,
       "content": 0
     }
