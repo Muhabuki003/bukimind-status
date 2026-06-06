@@ -1,58 +1,13 @@
 {
-  "updated": "2026-06-06T23:37:00Z",
-  "agents": [
-    {
-      "id": "orchestrator",
-      "status": "working",
-      "task": "Active automation: 40 commits this week",
-      "output": "LOVEFLIX: PR #130 merged (34e6d40) — WS polling fallback live. 3 open PRs, 0 issues. hermes-automation-plans: pipeline on main (9c22f78). BOOKISTUDIO: Supabase online — 3 unread intakes. 40 commits this week across all repos.",
-      "bubble": "40 commits"
-    },
-    {
-      "id": "auditor",
-      "status": "working",
-      "task": "Auditing LOVEFLIX & infrastructure health",
-      "output": "LoveFlix latest: 34e6d40 — PR #130 merged, WS polling fallback deployed. 3 open PRs, 0 issues. <span class=\"ok\">40 commits in 7 days.</span> <span class=\"ok\">Supabase online — 3 unread BOOKISTUDIO intakes (ids 14, 11, 9).</span> <span class=\"ok\">hermes-automation-plans on main (9c22f78).</span>"
-    },
-    {
-      "id": "researcher",
-      "status": "idle",
-      "task": "Integration pending",
-      "output": "No TikTok/social API connected yet. Awaiting credentials to enable dropship market research."
-    },
-    {
-      "id": "builder",
-      "status": "working",
-      "task": "3 unread BOOKISTUDIO intakes",
-      "output": "Supabase inquiries: 3 unread (id 14 Jun 6, id 11 Jun 2, id 9 May 13). No new intakes since last cycle. Pipeline docs on main in hermes-automation-plans. <span class=\"ok\">Intake endpoint online.</span> <span class=\"wn\">3 intakes awaiting manual review.</span>"
-    },
-    {
-      "id": "content",
-      "status": "idle",
-      "task": "Integration pending",
-      "output": "No social posting API connected yet. Content agent standing by."
-    },
-    {
-      "id": "qa",
-      "status": "idle",
-      "task": "Awaiting build",
-      "output": "Will run after Builder completes a project. Currently idle."
-    }
-  ],
-  "metrics": {
-    "tasks": 40,
-    "prs": 3,
-    "bars": {
-      "loveflix": 74,
-      "bookistudio": 45,
-      "dropship": 0,
-      "content": 0
-    }
-  },
+  "updated": "2026-06-06T23:12:05Z",
   "events": [
     {
+      "agent": "BUILD",
+      "msg": "Prompts + templates + docs built \u2014 11 files pushed"
+    },
+    {
       "agent": "AUDIT",
-      "msg": "LoveFlix: PR #130 merged (34e6d40) — WS polling fallback live. 3 open PRs, 0 issues. 40 commits this week."
+      "msg": "LoveFlix: PR #130 merged (34e6d40) \u2014 WS polling fallback live. 3 open PRs, 0 issues. 40 commits this week."
     },
     {
       "agent": "BUILD",
@@ -64,15 +19,76 @@
     },
     {
       "agent": "BUKIMIND",
-      "msg": "40 commits across all repos this week — largest contributor LOVEFLIX"
+      "msg": "40 commits across all repos this week \u2014 largest contributor LOVEFLIX"
     },
     {
       "agent": "BUILD",
       "msg": "Reading DROPSHIPPING.md from automation plans"
-    },
-    {
-      "agent": "BUKIMIND",
-      "msg": "🏗️ New project: Dropship Pipeline"
     }
-  ]
+  ],
+  "rooms": {
+    "hq": {
+      "name": "HQ",
+      "agents": [],
+      "metrics": {
+        "tasks": 0,
+        "prs": 0,
+        "rooms": 1,
+        "bars": {}
+      }
+    },
+    "default": {
+      "name": "Main Room",
+      "agents": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Active automation: 40 commits this week",
+          "output": "LOVEFLIX: PR #130 merged (34e6d40) \u2014 WS polling fallback live. 3 open PRs, 0 issues. hermes-automation-plans: pipeline on main (9c22f78). BOOKISTUDIO: Supabase online \u2014 3 unread intakes. 40 commits this week across all repos.",
+          "bubble": "40 commits"
+        },
+        {
+          "id": "auditor",
+          "status": "working",
+          "task": "Auditing LOVEFLIX & infrastructure health",
+          "output": "LoveFlix latest: 34e6d40 \u2014 PR #130 merged, WS polling fallback deployed. 3 open PRs, 0 issues. <span class=\"ok\">40 commits in 7 days.</span> <span class=\"ok\">Supabase online \u2014 3 unread BOOKISTUDIO intakes (ids 14, 11, 9).</span> <span class=\"ok\">hermes-automation-plans on main (9c22f78).</span>"
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "task": "Integration pending",
+          "output": "No TikTok/social API connected yet. Awaiting credentials to enable dropship market research."
+        },
+        {
+          "id": "builder",
+          "status": "working",
+          "task": "3 unread BOOKISTUDIO intakes",
+          "output": "Supabase inquiries: 3 unread (id 14 Jun 6, id 11 Jun 2, id 9 May 13). No new intakes since last cycle. Pipeline docs on main in hermes-automation-plans. <span class=\"ok\">Intake endpoint online.</span> <span class=\"wn\">3 intakes awaiting manual review.</span>"
+        },
+        {
+          "id": "content",
+          "status": "idle",
+          "task": "Integration pending",
+          "output": "No social posting API connected yet. Content agent standing by."
+        },
+        {
+          "id": "qa",
+          "status": "idle",
+          "task": "Awaiting build",
+          "output": "Will run after Builder completes a project. Currently idle."
+        }
+      ],
+      "metrics": {
+        "tasks": 40,
+        "prs": 3,
+        "bars": {
+          "loveflix": 74,
+          "bookistudio": 45,
+          "dropship": 0,
+          "content": 0
+        }
+      }
+    }
+  },
+  "current_room": "default"
 }
