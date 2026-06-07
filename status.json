@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T07:36:15Z",
+  "updated": "2026-06-07T08:02:00Z",
   "version": 5,
   "current_room": "homework",
   "rooms": {
@@ -416,9 +416,9 @@
         {
           "id": "orchestrator",
           "status": "working",
-          "task": "Deploying Hermes + DeerFlow on VPS",
-          "output": "VPS: HETZNER CX23 ✅\nIP: 167.233.38.96\nUbuntu 26.04\nStatus: PROVISIONING",
-          "action": "Deploying Hermes + DeerFlow on VPS",
+          "task": "Hermes online — setting up gateway",
+          "output": "VPS: HETZNER CX23 ✅\nHermes: ONLINE ✅\nDeepSeek: connected ✅",
+          "action": "Hermes responding on VPS",
           "currentFile": "provision.sh",
           "snippet": "# Phase 1: Server provisioning",
           "activity": "working",
@@ -443,9 +443,9 @@
         },
         {
           "id": "hermes-install",
-          "status": "pending",
-          "task": "Install Hermes on VPS",
-          "output": "Status: AWAITING PROVISION"
+          "status": "done",
+          "task": "Hermes installed & configured",
+          "output": "Hermes v0.16.0 ✅\nDeepSeek configured\nStatus: ONLINE"
         },
         {
           "id": "deerflow-install",
@@ -477,8 +477,8 @@
         "prs": 0,
         "agents": 6,
         "bars": {
-          "provision": 10,
-          "hermes": 0,
+          "provision": 100,
+          "hermes": 100,
           "deerflow": 0,
           "mcp": 0,
           "portal": 0
@@ -487,6 +487,10 @@
     }
   },
   "events": [
+    {
+      "agent": "VPS",
+      "msg": "🚀 Hermes is LIVE on the VPS!"
+    },
     {
       "agent": "VPS",
       "msg": "🔥 New project: VPS // Cloud Infra — deploying Hermes + DeerFlow"
