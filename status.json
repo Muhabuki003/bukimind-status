@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T04:35:24Z",
+  "updated": "2026-06-07T05:43:05Z",
   "version": 5,
   "current_room": "homework",
   "rooms": {
@@ -376,11 +376,17 @@
           "task": "Course materials & syntax lookup",
           "output": "REFERENCE\nStatus: IDLE\nUpload your PowerPoints and I will index them",
           "activity": "idle",
-          "action": "Standing by",
-          "currentFile": "—",
-          "snippet": "",
-          "lastActive": "04:35:13",
-          "recentActivity": []
+          "action": "Book indexed — 12 chapters loaded",
+          "currentFile": "book-full.txt",
+          "snippet": "Chapter 1: Intro to Programming\\nChapter 2: Creating Applications\\nChapter 3: Variables & Calculations\\n...12 chapters total",
+          "lastActive": "05:43:05",
+          "recentActivity": [
+            {
+              "ts": "05:43:05",
+              "desc": "Extracted 1.9M chars from Starting Out with Visual Basic 8th Ed",
+              "file": "book-full.txt"
+            }
+          ]
         }
       ],
       "metrics": {
