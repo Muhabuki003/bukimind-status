@@ -1,7 +1,7 @@
 {
-  "updated": "2026-06-07T03:02:37Z",
+  "updated": "2026-06-07T04:35:13Z",
   "version": 5,
-  "current_room": "loveflix",
+  "current_room": "homework",
   "rooms": {
     "hq": {
       "name": "BUKIMIND HQ",
@@ -312,6 +312,79 @@
           "store": 25
         }
       }
+    },
+    "homework": {
+      "name": "Homework // Visual Basics",
+      "agents": [
+        {
+          "id": "tutor",
+          "status": "idle",
+          "task": "Ready to help with Visual Basics",
+          "output": "TUTOR\nSummer course: Visual Basics\nReady for your first question!",
+          "activity": "idle",
+          "action": "Waiting for course materials",
+          "currentFile": "—",
+          "snippet": "",
+          "lastActive": "04:35:13",
+          "recentActivity": []
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "task": "Writing Visual Basic solutions",
+          "output": "CODER\nStatus: IDLE\nWaiting for assignment specs",
+          "activity": "idle",
+          "action": "Standing by",
+          "currentFile": "—",
+          "snippet": "",
+          "lastActive": "04:35:13",
+          "recentActivity": []
+        },
+        {
+          "id": "debugger",
+          "status": "idle",
+          "task": "Ready to debug your code",
+          "output": "DEBUGGER\nStatus: IDLE\nPaste code and I will find the bug",
+          "activity": "idle",
+          "action": "Standing by",
+          "currentFile": "—",
+          "snippet": "",
+          "lastActive": "04:35:13",
+          "recentActivity": []
+        },
+        {
+          "id": "explainer",
+          "status": "idle",
+          "task": "Breaks concepts down step by step",
+          "output": "EXPLAINER\nStatus: IDLE\nReady to explain any Visual Basic concept",
+          "activity": "idle",
+          "action": "Standing by",
+          "currentFile": "—",
+          "snippet": "",
+          "lastActive": "04:35:13",
+          "recentActivity": []
+        },
+        {
+          "id": "reference",
+          "status": "idle",
+          "task": "Course materials & syntax lookup",
+          "output": "REFERENCE\nStatus: IDLE\nUpload your PowerPoints and I will index them",
+          "activity": "idle",
+          "action": "Standing by",
+          "currentFile": "—",
+          "snippet": "",
+          "lastActive": "04:35:13",
+          "recentActivity": []
+        }
+      ],
+      "metrics": {
+        "tasks": 0,
+        "prs": 0,
+        "agents": 5,
+        "bars": {
+          "progress": 0
+        }
+      }
     }
   },
   "events": [
@@ -338,6 +411,14 @@
     {
       "agent": "BUKIMIND",
       "msg": "🎉 Multi-room office live: HQ + 3 rooms"
+    },
+    {
+      "agent": "BUKIMIND",
+      "msg": "New project: Homework // Visual Basics"
+    },
+    {
+      "agent": "TUTOR",
+      "msg": "☕ Ready when you are — share your first question or PPT!"
     }
   ]
 }
