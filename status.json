@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T04:35:13Z",
+  "updated": "2026-06-07T04:35:24Z",
   "version": 5,
   "current_room": "homework",
   "rooms": {
@@ -322,11 +322,17 @@
           "task": "Ready to help with Visual Basics",
           "output": "TUTOR\nSummer course: Visual Basics\nReady for your first question!",
           "activity": "idle",
-          "action": "Waiting for course materials",
-          "currentFile": "—",
-          "snippet": "",
-          "lastActive": "04:35:13",
-          "recentActivity": []
+          "action": "Room ready — waiting for your Visual Basics materials",
+          "currentFile": "status.json",
+          "snippet": "Dim greeting As String = \"Ready to help!\"\\nConsole.WriteLine(greeting)",
+          "lastActive": "04:35:24",
+          "recentActivity": [
+            {
+              "ts": "04:35:24",
+              "desc": "Homework // Visual Basics room created with 5 agents: Tutor, Coder, Debugger, Explainer, Reference",
+              "file": "status.json"
+            }
+          ]
         },
         {
           "id": "coder",
