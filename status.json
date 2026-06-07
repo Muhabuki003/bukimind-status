@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T06:38:32Z",
+  "updated": "2026-06-07T07:36:15Z",
   "version": 5,
   "current_room": "homework",
   "rooms": {
@@ -7,9 +7,9 @@
       "name": "BUKIMIND HQ",
       "agents": [],
       "metrics": {
-        "tasks": 83,
+        "tasks": 84,
         "prs": 3,
-        "rooms": 4,
+        "rooms": 7,
         "bars": {
           "bukimind": 50,
           "bookistudio": 45,
@@ -96,7 +96,9 @@
         "tasks": 83,
         "prs": 3,
         "agents": 6,
-        "bars": {}
+        "bars": {
+          "vps": 5
+        }
       }
     },
     "bookistudio": {
@@ -407,9 +409,88 @@
           "progress": 0
         }
       }
+    },
+    "vps": {
+      "name": "VPS // Cloud Infra",
+      "agents": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "task": "Deploying Hermes + DeerFlow on VPS",
+          "output": "VPS: HETZNER CX23 ✅\nIP: 167.233.38.96\nUbuntu 26.04\nStatus: PROVISIONING",
+          "action": "Deploying Hermes + DeerFlow on VPS",
+          "currentFile": "provision.sh",
+          "snippet": "# Phase 1: Server provisioning",
+          "activity": "working",
+          "lastActive": "07:35:00",
+          "recentActivity": [
+            {
+              "ts": "07:35:00",
+              "desc": "VPS provisioned — Hetzner CX23, Ubuntu 26.04",
+              "file": "hetzner-api"
+            },
+            {
+              "ts": "07:35:00",
+              "desc": "SSH key configured — root access ready",
+              "file": "~/.ssh/vps_hetzner"
+            },
+            {
+              "ts": "07:35:00",
+              "desc": "🔥 VPS CONNECTED — starting setup",
+              "file": "provision.sh"
+            }
+          ]
+        },
+        {
+          "id": "hermes-install",
+          "status": "pending",
+          "task": "Install Hermes on VPS",
+          "output": "Status: AWAITING PROVISION"
+        },
+        {
+          "id": "deerflow-install",
+          "status": "pending",
+          "task": "Deploy DeerFlow on VPS",
+          "output": "Status: AWAITING HERMES"
+        },
+        {
+          "id": "mcp-config",
+          "status": "pending",
+          "task": "Configure MCP servers",
+          "output": "Status: AWAITING DEPLOY"
+        },
+        {
+          "id": "employee-portal",
+          "status": "pending",
+          "task": "Build employee chat portal",
+          "output": "Status: PLANNING"
+        },
+        {
+          "id": "office-wiring",
+          "status": "pending",
+          "task": "Wire live activity to Bukimind office",
+          "output": "Status: PLANNING"
+        }
+      ],
+      "metrics": {
+        "tasks": 0,
+        "prs": 0,
+        "agents": 6,
+        "bars": {
+          "provision": 10,
+          "hermes": 0,
+          "deerflow": 0,
+          "mcp": 0,
+          "portal": 0
+        }
+      }
     }
   },
   "events": [
+    {
+      "agent": "VPS",
+      "msg": "🔥 New project: VPS // Cloud Infra — deploying Hermes + DeerFlow"
+    },
     {
       "agent": "HOMEWORK",
       "msg": "📄 Visual Basic Ch. 3 — Variables & Calculations delivered to desk"
