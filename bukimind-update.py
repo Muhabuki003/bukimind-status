@@ -103,7 +103,7 @@ def deliver_to_desk(data, room_id, title, file_ext):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--agent","-a", help="Agent ID")
-    p.add_argument("--room","-r", required=True)
+    p.add_argument("--room","-r", help="Room ID", default="bukimind")
     p.add_argument("--action","-ac", help="What they're doing")
     p.add_argument("--file","-f", help="Current file")
     p.add_argument("--code","-c", help="Code snippet")
