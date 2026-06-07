@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T23:48:49Z",
+  "updated": "2026-06-07T02:48:26Z",
   "version": 5,
   "current_room": "loveflix",
   "rooms": {
@@ -25,13 +25,47 @@
           "id": "orchestrator",
           "status": "working",
           "task": "Supervising all rooms",
-          "output": "BUKIMIND CORE\n4 rooms active\nmulti-room office: LIVE\nEvents flowing: OK"
+          "output": "BUKIMIND CORE\n4 rooms active\nmulti-room office: LIVE\nEvents flowing: OK",
+          "action": "Overseeing office systems",
+          "currentFile": "index.html",
+          "snippet": "// 4 rooms active\n// All agents online",
+          "activity": "working",
+          "lastActive": "02:48:26",
+          "recentActivity": [
+            {
+              "ts": "23:45:00",
+              "desc": "Deployed multi-room office",
+              "file": "index.html"
+            },
+            {
+              "ts": "02:48:26",
+              "desc": "Monitoring agent activity",
+              "file": "index.html"
+            }
+          ]
         },
         {
           "id": "system",
           "status": "working",
           "task": "Monitoring infrastructure",
-          "output": "Hermes gateway: OK\nStatus feed: live"
+          "output": "Hermes gateway: OK\nStatus feed: live",
+          "action": "Monitoring infrastructure",
+          "currentFile": "functions/status.js",
+          "snippet": "const url = \"https://raw.githubusercontent.com/...\"\nconst response = await fetch(url)",
+          "activity": "working",
+          "lastActive": "02:48:26",
+          "recentActivity": [
+            {
+              "ts": "23:30:00",
+              "desc": "Status proxy running",
+              "file": "functions/status.js"
+            },
+            {
+              "ts": "02:48:26",
+              "desc": "Polling GitHub for updates",
+              "file": "functions/status.js"
+            }
+          ]
         },
         {
           "id": "gateway",
@@ -72,13 +106,42 @@
           "id": "orchestrator",
           "status": "working",
           "task": "Managing client pipeline",
-          "output": "Pipeline: ACTIVE\n3 clients in queue\nStripe: live\nWebhook: deployed"
+          "output": "Pipeline: ACTIVE\n3 clients in queue\nStripe: live\nWebhook: deployed",
+          "action": "Managing client pipeline",
+          "currentFile": "prompts/intake-analyzer.md",
+          "snippet": "# Intake Analyzer Agent\nAnalyze new client inquiries from Supabase",
+          "activity": "working",
+          "lastActive": "02:48:26",
+          "recentActivity": [
+            {
+              "ts": "22:00:00",
+              "desc": "Set up Stripe products",
+              "file": "stripe-setup.js"
+            },
+            {
+              "ts": "22:30:00",
+              "desc": "Deployed webhook worker",
+              "file": "stripe-webhook-worker.js"
+            }
+          ]
         },
         {
           "id": "intake",
           "status": "working",
           "task": "Monitoring inquiries",
-          "output": "Supabase: polling every 30m\n3 inquiries received"
+          "output": "Supabase: polling every 30m\n3 inquiries received",
+          "action": "Monitoring new inquiries",
+          "currentFile": "check-intake.js",
+          "snippet": "const { createClient } = require(\"@supabase/supabase-js\")\nconst supabase = createClient(url, key)",
+          "activity": "working",
+          "lastActive": "02:48:26",
+          "recentActivity": [
+            {
+              "ts": "23:15:00",
+              "desc": "Last cron check: 0 new intakes",
+              "file": "check-intake.js"
+            }
+          ]
         },
         {
           "id": "researcher",
@@ -130,7 +193,24 @@
           "id": "auditor",
           "status": "working",
           "task": "Scanning for dead routes",
-          "output": "Scanning 847 files\n14 hardcoded strings found\nReport drafted"
+          "output": "Scanning 847 files\n14 hardcoded strings found\nReport drafted",
+          "action": "Scanning codebase",
+          "currentFile": "home.html",
+          "snippet": "<a href=\"privacy.html\">Privacy</a>\n<a href=\"terms.html\">Terms</a>",
+          "activity": "working",
+          "lastActive": "02:48:26",
+          "recentActivity": [
+            {
+              "ts": "23:00:00",
+              "desc": "Audit complete: 3 issues found",
+              "file": "home.html"
+            },
+            {
+              "ts": "23:05:00",
+              "desc": "Verified 9 new pages deployed",
+              "file": "loveflix.report"
+            }
+          ]
         },
         {
           "id": "deployer",
@@ -222,27 +302,27 @@
   "events": [
     {
       "agent": "AUDIT",
-      "msg": "Fixing top 3 audit issues \u2014 starting with story map button"
+      "msg": "Fixing top 3 audit issues — starting with story map button"
     },
     {
       "agent": "SYSTEM",
-      "msg": "\ud83d\uddd1\ufe0f Cron job removed \u2014 rooms are permanent now"
+      "msg": "🗑️ Cron job removed — rooms are permanent now"
     },
     {
       "agent": "SYSTEM",
-      "msg": "Renamed Loveflix room \u2014 switched to it"
+      "msg": "Renamed Loveflix room — switched to it"
     },
     {
       "agent": "BUILD",
-      "msg": "Dropship prompts + templates + docs built \u2014 11 files"
+      "msg": "Dropship prompts + templates + docs built — 11 files"
     },
     {
       "agent": "BUKIMIND",
-      "msg": "\ud83c\udfd7\ufe0f New project: Dropship Pipeline"
+      "msg": "🏗️ New project: Dropship Pipeline"
     },
     {
       "agent": "BUKIMIND",
-      "msg": "\ud83c\udf89 Multi-room office live: HQ + 3 rooms"
+      "msg": "🎉 Multi-room office live: HQ + 3 rooms"
     }
   ]
 }
