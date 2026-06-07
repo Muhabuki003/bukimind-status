@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T08:02:00Z",
+  "updated": "2026-06-07T11:45:00Z",
   "version": 5,
   "current_room": "homework",
   "rooms": {
@@ -416,11 +416,11 @@
         {
           "id": "orchestrator",
           "status": "working",
-          "task": "Hermes online — setting up gateway",
-          "output": "VPS: HETZNER CX23 ✅\nHermes: ONLINE ✅\nDeepSeek: connected ✅",
-          "action": "Hermes responding on VPS",
+          "task": "Setup complete! Waiting for user to deploy DeerFlow",
+          "output": "VPS: HETZNER CX23 ✅\nHermes: ONLINE ✅\nGateway: RUNNING (systemd)\nSkills: TRANSFERRED ✅\nMemory: TRANSFERRED ✅\nDeerFlow: READY TO DEPLOY",
+          "action": "Hermes 24/7 on VPS — waiting on you!",
           "currentFile": "provision.sh",
-          "snippet": "# Phase 1: Server provisioning",
+          "snippet": "Hermes v0.16.0 — Live on Hetzner",
           "activity": "working",
           "lastActive": "07:35:00",
           "recentActivity": [
@@ -444,14 +444,14 @@
         {
           "id": "hermes-install",
           "status": "done",
-          "task": "Hermes installed & configured",
-          "output": "Hermes v0.16.0 ✅\nDeepSeek configured\nStatus: ONLINE"
+          "task": "Hermes installed, configured, gateway running",
+          "output": "Hermes: ONLINE ✅\nSkills: TRANSFERRED ✅\nMemory: TRANSFERRED ✅"
         },
         {
           "id": "deerflow-install",
           "status": "pending",
-          "task": "Deploy DeerFlow on VPS",
-          "output": "Status: AWAITING HERMES"
+          "task": "Ready — needs user approval to Docker deploy",
+          "output": "Code transferred ✅\nConfig ready ✅\nModel: DeepSeek configured\nRun: docker compose up -d"
         },
         {
           "id": "mcp-config",
@@ -479,7 +479,7 @@
         "bars": {
           "provision": 100,
           "hermes": 100,
-          "deerflow": 0,
+          "deerflow": 70,
           "mcp": 0,
           "portal": 0
         }
@@ -487,6 +487,10 @@
     }
   },
   "events": [
+    {
+      "agent": "VPS",
+      "msg": "✅ Hermes gateway running 24/7 on VPS — WhatsApp, Telegram, Email always-on!"
+    },
     {
       "agent": "VPS",
       "msg": "🚀 Hermes is LIVE on the VPS!"
