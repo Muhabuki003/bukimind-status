@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T06:24:03Z",
+  "updated": "2026-06-07T06:38:16Z",
   "version": 5,
   "current_room": "homework",
   "rooms": {
@@ -318,14 +318,14 @@
       "agents": [
         {
           "id": "tutor",
-          "status": "idle",
+          "status": "working",
           "task": "Ready to help with Visual Basics",
           "output": "TUTOR\nSummer course: Visual Basics\nReady for your first question!",
           "activity": "idle",
-          "action": "Ready — waiting for your assignment",
-          "currentFile": "—",
-          "snippet": "Dim greeting As String = \"Ready to help!\"\\nConsole.WriteLine(greeting)",
-          "lastActive": "06:24:03",
+          "action": "Delivering completed work",
+          "currentFile": "Visual Basic Ch. 3 — Var",
+          "snippet": "Walking papers to Boss Desk 📄",
+          "lastActive": "06:38:16",
           "recentActivity": [
             {
               "ts": "04:35:24",
@@ -336,6 +336,11 @@
               "ts": "06:24:03",
               "desc": "Room is live, 5 agents standing by. Book indexed. Waiting for chapter/assignment details.",
               "file": "—"
+            },
+            {
+              "ts": "06:38:16",
+              "desc": "Delivered Visual Basic Ch. 3 — Variables & Calculations to Boss Desk",
+              "file": "Visual Basic Ch. 3 — Variables & Calculations"
             }
           ]
         },
@@ -406,6 +411,10 @@
   },
   "events": [
     {
+      "agent": "HOMEWORK",
+      "msg": "📄 Visual Basic Ch. 3 — Variables & Calculations delivered to desk"
+    },
+    {
       "agent": "AUDIT",
       "msg": "Fixing top 3 audit issues — starting with story map button"
     },
@@ -432,10 +441,31 @@
     {
       "agent": "BUKIMIND",
       "msg": "New project: Homework // Visual Basics"
+    }
+  ],
+  "desk_delivery": {
+    "agent_id": "tutor",
+    "room_id": "homework",
+    "title": "Visual Basic Ch. 3 — Variables & Calculations",
+    "ext": "doc",
+    "ts": "06:38:16"
+  },
+  "desk_items": [
+    {
+      "file": "1780812627_sample-report.txt",
+      "title": "Q3 Market Analysis Report",
+      "ext": "txt",
+      "ts": 1780812627,
+      "time": "01:10 AM",
+      "date": "Jun 07"
     },
     {
-      "agent": "TUTOR",
-      "msg": "☕ Ready when you are — share your first question or PPT!"
+      "file": "1780813476_vb-ch3-summary.md",
+      "title": "Visual Basic Ch. 3 — Variables & Calculations",
+      "ext": "md",
+      "ts": 1780813476,
+      "time": "01:24 AM",
+      "date": "Jun 07"
     }
   ]
 }
