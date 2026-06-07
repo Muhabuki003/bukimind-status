@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T03:01:32Z",
+  "updated": "2026-06-07T03:02:37Z",
   "version": 5,
   "current_room": "loveflix",
   "rooms": {
@@ -196,14 +196,14 @@
         },
         {
           "id": "auditor",
-          "status": "working",
+          "status": "done",
           "task": "Scanning for dead routes",
           "output": "Scanning 847 files\n14 hardcoded strings found\nReport drafted",
-          "action": "Investigating messaging sender bug",
-          "currentFile": "loveflix_chat.html",
-          "snippet": "<a href=\"privacy.html\">Privacy</a>\n<a href=\"terms.html\">Terms</a>",
-          "activity": "working",
-          "lastActive": "03:01:32",
+          "action": "Fixed sender display name bug",
+          "currentFile": "chat.html",
+          "snippet": "const displayName = (m.sender_id === partnerId) ? partnerName : meName;\\nlabel.textContent = displayName || m.sender_name;",
+          "activity": "idle",
+          "lastActive": "03:02:37",
           "recentActivity": [
             {
               "ts": "23:00:00",
@@ -219,6 +219,11 @@
               "ts": "03:01:32",
               "desc": "User reports: emails showing instead of display names in messages",
               "file": "loveflix_chat.html"
+            },
+            {
+              "ts": "03:02:37",
+              "desc": "Patched renderMsg() — uses meName/partnerName from settings instead of m.sender_name (which stored email)",
+              "file": "chat.html"
             }
           ]
         },
